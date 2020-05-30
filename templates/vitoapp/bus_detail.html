@@ -1,0 +1,27 @@
+{% extends 'vitoapp/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container data-preview bg-light mt-4 w-50">
+        <h3>Technical Data</h3>
+        <hr>
+        <p><strong>Make:</strong> {{ vito_detail.get_make_display }}</p>
+        <p><strong>Model:</strong> {{ vito_detail.get_model_display }}</p>
+        <p><strong>Year:</strong> {{ vito_detail.year }}</p>
+        <p><strong>Gear:</strong> {{ vito_detail.get_gear_display }}</p>
+        <p><strong>Chassis:</strong> {{ vito_detail.get_chassis_display }}</p>
+        <p><strong>Mileage:</strong> {{ vito_detail.mileage }}KM</p>
+        <p><strong>Horse Power:</strong> {{ vito_detail.horse_power }}</p>
+        <p><strong>Features:</strong> {{ vito_detail.features }}</p>
+        <p><strong>Capacity:</strong> {{ vito_detail.get_capacity_display }}</p>
+        <p><strong>Fuel:</strong> {{ vito_detail.get_fuel_display }}</p>
+        <p><strong>Price:</strong> {{ vito_detail.price }} JOD</p>
+        <p><strong>Color:</strong> {{ vito_detail.color }}</p>
+        <p><strong>Chassis Number :</strong> {{ vito_detail.chassis_number }}</p>
+        <p><strong>Phone Number:</strong> {{ vito_detail.phone_number }}</p>
+        <p><strong>Location:</strong> {{ vito_detail.location }}</p>
+        <p><strong>Store Name:</strong> {{ vito_detail.store_name }}</p>
+        <p><strong>Notes:</strong> {{ vito_detail.description }}</p>
+
+    </div>
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'vitoapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            {% for vito in vitos %}
+                <div class="col-lg-4 col-md-4 col-sm-6 mb-0 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'vitoapp/images/test.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ vito.title }}</h5>
+                            <p>Store Name: {{ vito.store_name }}</p>
+                            <a href="{% url 'vito:vito_detail' pk=vito.pk %}" class="btn btn-success">Show details</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}
